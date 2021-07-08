@@ -1,19 +1,45 @@
-var slideIndex = 0;
-showSlides();
+const carouselSlide = document.querySelector('.carousel-slide');
+const carouselImages = document.querySelectorAll('.carousel-slide img');
 
-function showSlide() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
+// buttons
+const prevBtn = document.querySelector('#prevBtn');
+const nextBtn = document.querySelector('#nextBtn');
+
+// counter
+let counter = 1;
+const size = carouselImages[0].clientWidth;
+
+carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+// button listener
+    // for next button
+nextBtn.addEventListener('click', () => {
+    if (counter >= carouselImages.length -1) return;
+    // transition
+    carouselSlide.style.transition = "transform 0.4s ease-in-out";
+    counter++;
+    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+});
+
+    // for prev button
+prevBtn.addEventListener('click', () => {
+    if (counter <= 0) return;
+    // transition
+    carouselSlide.style.transition = "transform 0.4s ease-in-out";
+    counter--;
+    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+});
+
+carouselSlide.addEventListener('transitionend', () => {
+    if (carouselImages[counter].id === 'lastClone') {
+        carouselSlide.style.transition = "none";
+        counter = carouselImages.length -2;
+        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
     }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+
+    if (carouselImages[counter].id === 'firstClone') {
+        carouselSlide.style.transition = "none";
+        counter = carouselImages.length - counter;
+        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
     }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
+});
