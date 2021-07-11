@@ -46,16 +46,29 @@
             </a>
         </div>
     </div>
-    <div class="carousel-container">
-        <i class="fas fa-arrow-left" id="prevBtn"></i>
-        <i class="fas fa-arrow-right" id='nextBtn'></i>
-        <div class="carousel-slide">
-            <img src="./assets/milkyWay-3.jpg" id="lastClone" alt="">
-            <img src="./assets/milkyWay-1.jpg" alt="">
-            <img src="./assets/milkyWay-2.jpg" alt="">
-            <img src="./assets/milkyWay-3.jpg" alt="">
-            <img src="./assets/milkyWay-1.jpg" id="firstClone" alt="">
+    <div class="carousel">
+        <div class="carousel-items">
+            <div class="item active">
+                <img src="./assets/milkyWay-1.jpg" alt="">
+                <div class="caption">
+                    1/3
+                </div>
+            </div>
+            <div class="item">
+                <img src="./assets/milkyWay-2.jpg" alt="">
+                <div class="caption">
+                    2/3
+                </div>
+            </div>
+            <div class="item">
+                <img src="./assets/milkyWay-3.jpg" alt="">
+                <div class="caption">
+                    3/3
+                </div>
+            </div>
         </div>
+        <i class="fas fa-arrow-left" id="prevBtn"></i>
+        <i class="fas fa-arrow-right" id="nextBtn"></i>
     </div>
     <main>
         <div class="content">
@@ -130,6 +143,6 @@
             </a>
         </div>
     </footer>
-    <script src="./resources/script.js"></script>
+    <script src="./resources/app.js"></script>
 </body>
 </html>
