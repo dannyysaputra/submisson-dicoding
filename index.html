@@ -17,15 +17,15 @@
 <body>
     <div class="hero-image">
         <header>
-            <nav>
-                <ul>
-                    <li class="nav-logo"> 
-                        <a href="#index">dannyy<span>saputra</span></a>
-                    </li>
-                    <li class="nav-item contact"> <a href="#contact">CONTACT</a> </li>
-                    <li class="nav-item about"> <a href="#about">ABOUT</a> </li>
-                    <li class="nav-item home"> <a href="">HOME</a> </li>
-                </ul>
+            <nav class="topnav" id="myTopnav">
+                <a>dannyy<span>saputra</span></a>
+
+                <a href="">HOME</a>
+                <a href="#about">ABOUT</a>
+                <a href="#contact">CONTACT</a>
+
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" 
+                    onclick="myFunction()">&#9776;</a>
             </nav>
         </header>
         <div class="container">
@@ -73,39 +73,42 @@
     <main>
         <div class="content">
             <article>
-                <h2>Galaksi Bima Sakti</h2>
-                <h4>Sumber: NASA/JPL-Caltech/R. Hurt (SSC/Caltech) <br>
-                    Diterbitkan: November 8, 2017</h4>
-
-                <p style="text-align: justify;">
-                    Seperti penjelajah awal yang memetakan benua-benua di dunia kita, para astronom sibuk memetakan 
-                    struktur spiral galaksi kita, Bima Sakti. Menggunakan gambar inframerah dari Teleskop Luar Angkasa Spitzer NASA, 
-                    para ilmuwan telah menemukan bahwa struktur spiral Elegan Bima Sakti didominasi oleh hanya dua lengan yang membungkus ujung bar pusat bintang. 
-                    Sebelumnya, galaksi kita diperkirakan memiliki empat lengan utama. 
-                </p>
-
-                <p style="text-align: justify;">
-                    Konsep seniman beranotasi menggambarkan pandangan baru Bima Sakti. Dua lengan utama galaksi (Scutum-Centaurus dan Perseus) dapat dilihat melekat pada ujung bar tengah yang tebal, 
-                    sementara dua lengan kecil yang sekarang diturunkan (Norma dan Sagitarius) kurang berbeda dan terletak di antara lengan utama.
-                </p>
-
-                <img class="image-content" src="./assets/roadMap-1.jpg">
-                <img class="image-content" src="./assets/roadMap-2.jpg">
-
-                <p style="text-align: justify;">
-                    Lengan utama terdiri dari kepadatan tertinggi bintang muda dan tua; 
-                    lengan kecil terutama diisi dengan gas dan kantong aktivitas pembentukan bintang.
-                </p>
-
-                <p style="text-align: justify;">
-                    Konsep seniman juga mencakup lengan spiral baru, yang disebut "Lengan kiloparsec jauh-3," ditemukan melalui survei radio-teleskop gas di Bima Sakti. 
-                    Lengan ini lebih pendek dari dua lengan utama dan terletak di sepanjang batang galaksi.
-                </p>
-
-                <p style="text-align: justify;">
-                    Matahari kita terletak di dekat lengan kecil parsial yang disebut Lengan Orion, atau Orion Spur, 
-                    yang terletak di antara lengan Sagitarius dan Perseus.
-                </p>
+                <header>
+                    <h2>Galaksi Bima Sakti</h2>
+                    <h4>Sumber: NASA/JPL-Caltech/R. Hurt (SSC/Caltech) <br>
+                        Diterbitkan: November 8, 2017</h4>
+                </header>
+                <section>
+                    <p>
+                        Seperti penjelajah awal yang memetakan benua-benua di dunia kita, para astronom sibuk memetakan 
+                        struktur spiral galaksi kita, Bima Sakti. Menggunakan gambar inframerah dari Teleskop Luar Angkasa Spitzer NASA, 
+                        para ilmuwan telah menemukan bahwa struktur spiral Elegan Bima Sakti didominasi oleh hanya dua lengan yang membungkus ujung bar pusat bintang. 
+                        Sebelumnya, galaksi kita diperkirakan memiliki empat lengan utama. 
+                    </p>
+    
+                    <p>
+                        Konsep seniman beranotasi menggambarkan pandangan baru Bima Sakti. Dua lengan utama galaksi (Scutum-Centaurus dan Perseus) dapat dilihat melekat pada ujung bar tengah yang tebal, 
+                        sementara dua lengan kecil yang sekarang diturunkan (Norma dan Sagitarius) kurang berbeda dan terletak di antara lengan utama.
+                    </p>
+    
+                    <img class="image-content" src="./assets/roadMap-1.jpg">
+                    <img class="image-content" src="./assets/roadMap-2.jpg">
+    
+                    <p>
+                        Lengan utama terdiri dari kepadatan tertinggi bintang muda dan tua; 
+                        lengan kecil terutama diisi dengan gas dan kantong aktivitas pembentukan bintang.
+                    </p>
+    
+                    <p>
+                        Konsep seniman juga mencakup lengan spiral baru, yang disebut "Lengan kiloparsec jauh-3," ditemukan melalui survei radio-teleskop gas di Bima Sakti. 
+                        Lengan ini lebih pendek dari dua lengan utama dan terletak di sepanjang batang galaksi.
+                    </p>
+    
+                    <p>
+                        Matahari kita terletak di dekat lengan kecil parsial yang disebut Lengan Orion, atau Orion Spur, 
+                        yang terletak di antara lengan Sagitarius dan Perseus.
+                    </p>
+                </section>
             </article>
         </div>
         <aside>
@@ -123,7 +126,6 @@
                         Asal Sekolah    : SMKN 02 Bandung <br>
                         Jurusan : Rekayasa Perangkat Lunak <br>
                     </p>
-                    
                 </section>
             </article>
         </aside>
@@ -144,5 +146,6 @@
         </div>
     </footer>
     <script src="./resources/app.js"></script>
+    <script src="./resources/navbar.js"></script>
 </body>
 </html>
